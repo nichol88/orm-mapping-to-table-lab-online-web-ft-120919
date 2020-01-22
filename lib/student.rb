@@ -18,7 +18,7 @@ class Student
     )
     VALUES (? , ?)
     SQL
-    sql.execute()
+    sql.execute(sql, name, grade)
   end
 
   def self.drop_table
