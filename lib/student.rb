@@ -28,8 +28,8 @@ class Student
 
   def save(name, grade)
     <<-SQL
+    INSERT INTO students
     SQL
-
     sql.execute(sql, name, grade)
   end
 end
