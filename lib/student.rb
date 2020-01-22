@@ -20,9 +20,10 @@ class Student
   end
 
   def self.drop_table
-    <<-SQL
+    sql = <<-SQL
     DROP TABLE students
     SQL
+    sql.execute(sql)
   end
 
   def save(name, grade)
