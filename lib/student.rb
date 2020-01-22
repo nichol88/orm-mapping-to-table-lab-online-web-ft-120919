@@ -9,8 +9,8 @@ class Student
     @grade = grade
   end
 
-  def self.create_table(name, grade)
-    sql <<-SQL
+  def self.create_table
+    <<-SQL
     CREATE TABLE IF NOT EXISTS students (
       id INTEGER PRIMARY KEY,
       name TEXT,
@@ -18,10 +18,15 @@ class Student
     )
     VALUES (? , ?)
     SQL
-    sql.execute(sql, name, grade)
   end
 
   def self.drop_table
+    <<-SQL
+    DROP TABLE students
+    SQL
+  end
 
+  def method_name(name, grade)
+    sql.execute(sql, name, grade)
   end
 end
