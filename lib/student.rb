@@ -27,6 +27,9 @@ class Student
   end
 
   def save(name, grade)
+    <<-SQL
+    SQL
+    
     sql.execute(sql, name, grade)
   end
 end
