@@ -26,7 +26,7 @@ class Student
     SQL
   end
 
-  def method_name(name, grade)
+  def save(name, grade)
     sql.execute(sql, name, grade)
   end
 end
