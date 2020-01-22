@@ -16,6 +16,7 @@ class Student
       name TEXT,
       grade INTEGER
     )
+    VALUES (? , ?)
     SQL
   end
 
